@@ -1,0 +1,60 @@
+﻿<Window x:Class="MyLibrary.BookReport"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:MyLibrary"
+        mc:Ignorable="d"
+        Title="Account" Height="450" Width="800"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        Background="{x:Null}"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResize">
+    <materialDesign:Card UniformCornerRadius="15" Background="{DynamicResource MaterialDesignPaper}" Margin="25" materialDesign:ShadowAssist.ShadowDepth="Depth4">
+        <materialDesign:DialogHost CloseOnClickAway="True" x:Name="DialogHost" Margin="0,-25,-38,0">
+            <StackPanel>
+                <StackPanel Width="100" Margin="0 25 0 0" Orientation="Vertical" HorizontalAlignment="Left" Background="#FFE7CB76" materialDesign:ShadowAssist.ShadowDepth="Depth4" Height="646">
+                    <StackPanel Width="auto" Height="50">
+                        <TextBlock Height="40" x:Name="usName" FontWeight="Bold" ></TextBlock>
+                    </StackPanel>
+                    <StackPanel Width="auto" Height="80" Margin="0 60 0 0">
+                        <materialDesign:PackIcon Width="50" Height="35" HorizontalAlignment="Center" Kind="BookPlus" Foreground="#FF0D1411" />
+                        <Button x:Name="btn_add" Content="Add book" Height="25"  Background="#FF595856" Click="add_click"/>
+                    </StackPanel>
+                    <StackPanel Width="auto" Height="80" Margin="0 10 0 0">
+                        <materialDesign:PackIcon Width="50" Height="35" HorizontalAlignment="Center" Kind="PeopleAdd" Foreground="#FF0D1411" />
+                        <Button x:Name="btn_member" Content="Membership" Height="25"   Background="#FF595856" Click="member_click"/>
+                    </StackPanel>
+                    <StackPanel Width="auto" Height="80" Margin="0 10 0 0">
+                        <materialDesign:PackIcon Width="50" Height="35" HorizontalAlignment="Center" Kind="ArrowLeft" Foreground="#FF0D1411" />
+                        <Button x:Name="btn_back" Content="Back" Height="25" Click="back_click" Background="#FF595856"/>
+                    </StackPanel>
+
+
+
+                </StackPanel>
+
+
+                <Grid Width="500" Height="450" Margin="-30 -840 0 0">
+                    <TextBlock Width="200" Height="60" Margin="-200 -360 0 0" Text="Book report" FontSize="28" FontWeight="Bold"></TextBlock>
+                    <DataGrid x:Name="issuedBooks" Height="150" Margin="0 -140 0 0">
+                        
+                    </DataGrid>
+                    <DataGrid x:Name="returnedBooks" Height="150" Margin="0 180 0 0"></DataGrid>
+                </Grid>
+
+
+
+
+
+
+
+               
+            </StackPanel>
+
+        </materialDesign:DialogHost>
+    </materialDesign:Card>
+</Window>
